@@ -1,5 +1,8 @@
 pipeline {
-    agent aws_node
+    agent { label 'aws_node' }
+        triggers {
+            pollSCM("")
+        }
     stages {
         stage('Example Build') {
             steps {
