@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent aws_node
     stages {
         stage('Example Build') {
             steps {
