@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-GB">
+<!--<![endif]-->
+
+<head>
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="UTF-8">
+    <title>Jenkins Demo</title>
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Favicons
+  ================================================== -->
+    <link rel="shortcut icon" href="http://sg.palo-it.com/wp-content/themes/florida-wp/images/favicon.ico">
+    <!-- CSS + JS
+  ================================================== -->
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <style type="text/css">
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+    </style>
+    <link rel='stylesheet' id='mt-shcore-style-css' href='http://sg.palo-it.com/wp-content/plugins/syntax-highlighter-mt/styles/shCore.css?ver=2.2.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='mt-theme-style-css' href='http://sg.palo-it.com/wp-content/plugins/syntax-highlighter-mt/styles/shThemeDefault.css?ver=2.2.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='main-style-css' href='http://sg.palo-it.com/wp-content/themes/florida-wp/css/master-min.php?ver=4.7.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='easy_table_style-css' href='http://sg.palo-it.com/wp-content/plugins/easy-table/themes/default/style.css?ver=1.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='wpmu-wpmu-ui-3-min-css-css' href='http://sg.palo-it.com/wp-content/plugins/wordpress-popup/inc/external/wpmu-lib/css/wpmu-ui.3.min.css?ver=4.7.10' type='text/css' media='all' />
+    <link rel='stylesheet' id='wpmu-animate-3-min-css-css' href='http://sg.palo-it.com/wp-content/plugins/wordpress-popup/inc/external/wpmu-lib/css/animate.3.min.css?ver=4.7.10' type='text/css' media='all' />
+    <style type="text/css" media="screen">
+    body {
+        background-color: #ffffff;
+        background-image: url('');
+    }
+    </style>
+    <style type="text/css" media="screen">
+    body {}
+    </style>
+    <style type="text/css">
+    .recentcomments a {
+        display: inline !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    </style>
+    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress." />
+    <!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://sg.palo-it.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+    <!--[if IE  8]><link rel="stylesheet" type="text/css" href="http://sg.palo-it.com/wp-content/plugins/js_composer/assets/css/vc-ie8.min.css" media="screen"><![endif]-->
+    <style type="text/css" id="syntaxhighlighteranchor"></style>
+    <style type="text/css" data-type="vc_custom-css">
+    .icon-box8 {
+        border: solid 1px #C8C8C8;
+        background-color: #ECECEC;
+        max-height: 150px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 17px;
+    }
+
+    h3 {
+        line-height: 1.5;
+    }
+
+    .change-color {
+        color: black!important;
+    }
+
+    .icon-box {
+        vertical-align: baseline;
+        margin-bottom: 60px;
+        clear: both;
+    }
+
+    .delivery_options article {
+        height: 120px;
+    }
+
+    .organize_options article {
+        height: 170px;
+    }
+
+    .training_options article {
+        height: 170px;
+    }
+
+    .icon-box p {
+        text-align: justify;
+        font-size: 17px;
+    }
+
+    .icon-box8 i {
+        background-color: #ECECEC;
+        font-size: 64px;
+        border: 0px;
+        width: 95px;
+        -webkit-transition: all 120s ease;
+        -moz-transition: all 120s ease;
+        -ms-transition: all 120s ease;
+        -o-transition: all 120s ease;
+        transition: all 120s ease;
+    }
+
+    .icon-box8 a {
+        background-color: #ECECEC;
+        width: 530px;
+        height: 133px;
+        font-size: 17px;
+    }
+
+    .icon-box8 p {
+        max-width: 530px;
+        font-size: 17px;
+    }
+
+    .icon-box8:hover i {
+        background-color: #ECECEC;
+    }
+
+    .icon-box8 img {
+        height: 60px;
+        display: inline-block;
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+    /* Portrait and Landscape */
+
+    @media screen and (max-width: 862px) {
+
+        .icon-box8 p {
+            max-width: 530px;
+            font-size: 9px;
+        }
+
+        .icon-box8 img {
+            height: 70px;
+            display: inline-block;
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 25px;
+            margin-bottom: 50px;
+            width: 70px;
+        }
+    }
+
+    @media screen and (max-width: 1262px) {
+        .delivery_options article {
+            height: auto;
+        }
+
+        .organize_options article {
+            height: auto;
+        }
+        .training_options article {
+            height: auto;
+        }
+    }
+    </style>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+    .vc_custom_1443496513713 {
+        background-color: #f2f2f2 !important;
+    }
+
+    .vc_custom_1443663816445 {
+        margin-top: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+        margin-left: 0px !important;
+        border-top-width: 0px !important;
+        border-right-width: 0px !important;
+        border-bottom-width: 0px !important;
+        border-left-width: 0px !important;
+        padding-right: 0px !important;
+        padding-bottom: 0px !important;
+        padding-left: 0px !important;
+        background-position: 0 0 !important;
+        background-repeat: no-repeat !important;
+    }
+    </style>
+    <noscript>
+        <style type="text/css">
+        .wpb_animate_when_almost_visible {
+            opacity: 1;
+        }
+        </style>
+    </noscript>
+</head>
+
+<body class="home page-template page-template-page-onepage page-template-page-onepage-php page page-id-17711 default-header  wpb-js-composer js-comp-ver-4.11.2.1 vc_responsive">
+    <!-- Primary Page Layout
+    ================================================== -->
+    <div id="wrap" class="colorskin-custom ">
+        <header id="header" class="horizontal-w  sm-rgt-mn  ">
+            <div class="container">
+                <div class="col-md-3 col-sm-3 logo-wrap">
+                    <div class="logo">
+                        <a href="http://sg.palo-it.com/"><img src="http://palo-it.com/wp-content/uploads/2017/06/logo_website.png" width="190" id="img-logo-w1" alt="logo" class="img-logo-w1"></a><a href="http://sg.palo-it.com/"><img src="http://palo-it.com/wp-content/uploads/2017/06/logo_website.png" width="190" id="img-logo-w2" alt="logo" class="img-logo-w2"></a><span class="logo-sticky"><a href="http://sg.palo-it.com/"><img src="http://palo-it.com/wp-content/uploads/2017/06/logo_website.png" width="190" id="img-logo-w3" alt="logo" class="img-logo-w3"></a></span></div>
+                </div>
+                <nav id="nav-wrap" class="nav-wrap1 col-md-9 col-sm-9">
+                    <div class="container">
+                        <ul id="nav">
+                            <li id="menu-item-17231" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-17231"><a href="http://sg.palo-it.com/#innovate" data-description="meet florida">Jenkins Demo</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /nav-wrap -->
+            </div>
+        </header>
+        <!-- end-header -->
+        <section id="main-content" class="container">
+            <div style="float: left; width: 100% ">
+                <div style="float: left; width: 40%; ">
+                    <img src="jenkins.png" />
+                </div>
+                <div class="col-md-4" styple="float: left; width: 56%; ">
+                    <h1 class="page-title change-color" style="text-align: left; margin-top: 33px!important"><span>
+Jenkins
+</span></h1>
+                    <p>
+                        <strong class="change-color">
+Build great things at any scale
+</strong>
+                    </p>
+                    <p class="change-color">
+                        The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.
+                    </p>
+                </div>
+                
+                <span id="scroll-top"><a class="scrollup"><i class="fa-chevron-up"></i></a></span></div>
+        </section>
+        <!-- end-wrap -->
+        <!-- End Document
+================================================== -->
+        <style>
+        .cpm-map img {
+            max-width: none;
+            box-shadow: none;
+        }
+        </style>
+</body>
+
+</html>
