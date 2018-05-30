@@ -1,6 +1,5 @@
 pipeline {
-    agent { label 'aws_node' }
-        triggers {
+            triggers {
             pollSCM("")
         }
     stages {
