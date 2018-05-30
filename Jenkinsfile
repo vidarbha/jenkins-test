@@ -1,23 +1,20 @@
 pipeline {
-            triggers {
-            pollSCM("")
-        }
+    agent any
+
     stages {
-        stage('Example Build') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Building..'
             }
         }
-        stage('Example Deploy') {
-            agent {
-                label "some-label"
-            }
-            when {
-                beforeAgent true
-                branch 'production'
-            }
+        stage('Test') {
             steps {
-                echo 'Deploying'
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
