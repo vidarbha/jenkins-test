@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 checkout scm
-                echo "${env.BUILD_NUMBER}"
+                echo "${env.BUILD_NUMBER} This is to test"
             }
         }
         stage('RUn the gradle task') {
