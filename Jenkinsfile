@@ -8,5 +8,10 @@ pipeline {
                 checkout scm
             }
         }
+        stage('RUn the gradle task') {
+            steps {
+                sh './gradlew hello'
+            }
+        }
     }
 }
