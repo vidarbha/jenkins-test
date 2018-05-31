@@ -8,15 +8,5 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Test') {
-            steps {
-                sh './gradlew hello'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
     }
 }
