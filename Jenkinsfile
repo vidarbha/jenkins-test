@@ -10,6 +10,8 @@ pipeline {
         }
         stage('RUn the gradle task') {
             steps {
+                sh 'pwd'
+                sh 'id'
                 sh 'chmod -R 777 *'
                 sh './gradlew hello'
             }
