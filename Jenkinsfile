@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 checkout scm
+                echo "Running ${env.BUILD_ID}"
             }
         }
         stage('RUn the gradle task') {
