@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Pushed to Prod') {
             steps {
-            echo "./gradlew push"
+            sh './gradlew push'
             }
         }
     }
