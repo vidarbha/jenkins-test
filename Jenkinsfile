@@ -19,12 +19,12 @@ pipeline {
         }
         stage('Ingration Testing') {
             steps {
-                echo "Unit Testing is Succesfull"
+                echo "Integration Testing is succesfull"
             }
         }
         stage('Deploy to UAT') {
             steps {
-                echo "Integration Testing is succesfull"
+                echo "Pushed to UAT Environment"
             }
         }
         stage('Approval') {
