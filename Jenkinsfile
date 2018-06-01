@@ -35,9 +35,11 @@ pipeline {
     }
     stages {
         stage('Manual Confirmation') {
+            steps {
             unstash 'build'
             //do deploy stuff
              sh("deploy shell command might go here")
+            }
         }
       }
 }
