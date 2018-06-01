@@ -30,16 +30,8 @@ pipeline {
         stage('Pushed to PROD') {
             steps {
                echo "Successfully pushed to Production"
+                unstash 'build'
             }
         }
     }
-    stages {
-        stage('Manual Confirmation') {
-            steps {
-            unstash 'build'
-            //do deploy stuff
-             sh("deploy shell command might go here")
-            }
-        }
-      }
-}
+ }
