@@ -27,10 +27,15 @@ pipeline {
                 echo "Integration Testing is succesfull"
             }
         }
-        stage('Pushed to PROD') {
+        stage('Approval') {
             steps {
-               echo "Successfully pushed to Production"
+               echo "Approval is required"
                 input message: 'Confirmation', ok: 'OK'
+            }
+        }
+        stage('Pushed to Prod') {
+            steps {
+            echo "./gradlew push"
             }
         }
     }
