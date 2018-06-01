@@ -30,7 +30,7 @@ pipeline {
         stage('Pushed to PROD') {
             steps {
                echo "Successfully pushed to Production"
-                unstash 'build'
+                input message: 'Confirmation', ok: 'OK'
             }
         }
     }
