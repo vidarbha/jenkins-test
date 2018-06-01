@@ -32,19 +32,12 @@ pipeline {
                echo "Successfully pushed to Production"
             }
         }
-        stage("Production Deploy") {
-      //restore previously saved files
-      unstash 'build'
-      //do deploy stuff
-      sh("deploy shell command might go here")
     }
-  }
-     catch(Error|Exception e) {
-        mail(to: 'EMAIL@example.com',
-        subject: "${currentBuild.fullDisplayName} failed!"
-        body: "URL: ${env.BUILD_URL}, Error: ${e}")
-        //Finish failing the build after telling someone about it
-        throw e
+    stages {
+        stage('Manual Confirmation') {
+            unstash 'build'
+            //do deploy stuff
+             sh("deploy shell command might go here")
         }
-    }
+      }
 }
