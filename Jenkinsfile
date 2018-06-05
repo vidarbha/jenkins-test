@@ -14,7 +14,11 @@ pipeline {
             steps {
                 echo "Build is Successfull"
                 sh 'chmod -R 777 *'
-                sh './gradlew hello'
+            }
+        }
+        stage('Push to Dev') {
+            steps {
+               sh './gradlew pushDev'
             }
         }
         stage('Ingration Testing') {
