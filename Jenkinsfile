@@ -12,18 +12,17 @@ pipeline {
         }
         stage('Build the File System') {
             steps {
-                echo "Build is Successfull"
-                sh 'chmod -R 777 *'
-            }
+                echo "Build is Successful"
+                  }
         }
         stage('Push to Dev') {
             steps {
-               sh './gradlew pushDev'
+               echo "Pushed Successfully"
             }
         }
-        stage('Ingration Testing') {
+        stage('Integration Testing') {
             steps {
-                echo "Integration Testing is succesfull"
+                echo "Integration Testing is Successful"
             }
         }
         stage('Deploy to UAT') {
@@ -39,7 +38,7 @@ pipeline {
         }
         stage('Pushed to Prod') {
             steps {
-            sh './gradlew push'
+            echo "This is been pushed Successful"
             }
         }
     }
