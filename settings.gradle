@@ -1,4 +1,0 @@
-rootProject.name = 'acuo-auth'
-include 'auth-app'
-include 'devops'
-
