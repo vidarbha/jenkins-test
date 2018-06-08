@@ -2,7 +2,6 @@ pipeline {
     agent { label 'aws_jenkins' }
     triggers {
              pollSCM("")
-        
             }
     stages {
         stage('Checkout Source Code') {
