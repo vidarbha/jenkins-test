@@ -2,7 +2,6 @@ pipeline {
     agent { label 'aws_jenkins' }
     triggers {
              pollSCM("")
-        
             }
     stages {
         stage('Checkout Source Code') {
@@ -11,7 +10,7 @@ pipeline {
                 echo "${env.BUILD_NUMBER} The checkout is Successful"
             }
         }
-        stage('Build the File System') {
+        stage('Build') {
             steps {
                 echo "Build is Successful"
                   }
