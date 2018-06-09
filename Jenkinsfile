@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo "Build is Successful"
+                sh 'gradle -q compile'
                   }
         }
         stage('Push to Dev') {
