@@ -18,6 +18,7 @@ pipeline {
         }
         stage('Push to Dev') {
             steps {
+                sh 'pwd'
                echo "Pushed Successfully"
             }
         }
