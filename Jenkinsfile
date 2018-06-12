@@ -19,6 +19,7 @@ pipeline {
             steps {
                 sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/demo_test/demo/* ec2-user@172.31.12.184:/var/www/html/.'
                echo "Pushed Successfully"
+                
             }
         }
         stage('Integration Testing') {
