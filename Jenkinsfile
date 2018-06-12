@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Deploy to UAT') {
             steps {
-                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/demo_test/demo/* ec2-user@172.31.2.3:/var/www/html/.'
+                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/demo_test/demo/* ec2-user@172.31.1.22:/var/www/html/.'
                 echo "Pushed to UAT Environment"
             }
         }
