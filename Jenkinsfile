@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Push to Dev') {
             steps {
-                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/demo_test/demo/* ec2-user@172.31.12.184:/var/www/html/.'
+                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/Demo/demo/* ec2-user@172.31.12.184:/var/www/html/.'
                echo "Pushed Successfully"
                 
             }
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Deploy to UAT') {
             steps {
-                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/demo_test/demo/* ec2-user@172.31.1.22:/var/www/html/.'
+                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/Demo/demo/* ec2-user@172.31.1.22:/var/www/html/.'
                 echo "Pushed to UAT Environment"
             }
         }
@@ -38,7 +38,7 @@ pipeline {
         }
         stage('Pushed to Prod') {
             steps {
-                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/demo_test/demo/* ec2-user@172.31.0.46:/var/www/html/.'
+                sh 'scp -i /home/ec2-user/vid_jenkins_ec2.pem /home/ec2-user/workspace/Demo/demo/* ec2-user@172.31.0.46:/var/www/html/.'
             echo "This is been pushed Successful"
             }
         }
