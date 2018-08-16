@@ -82,3 +82,26 @@ Resources:
       Description: Redis Endpoint. Auto stored in parameter store
       Export:
         Name: !Sub '${AWS::StackName}-RedisCluster'
+        
+        Resources:
+  Ec2Instance1:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: !Ref AppInstanceType
+      ImageId: !Ref Ec2AMI
+      KeyName: !Ref KeyName
+      NetworkInterfaces:
+       - GroupSet:
+           - Fn::ImportValue: !Sub '${RootStackName}-EC2SecurityGroup'
+         AssociatePublicIpAddress: 'false'
+         DeviceIndex: '0'
+         DeleteOnTermination: 'true'
+         SubnetId:
+           Ref: AppSubnet1Id
+      Tags:
+        - Key: App-code
+          Value: !Ref AppCode
+        - Key: Name
+          Value: !Ref EC2AppHostName
+        - Key: PC-code
+          Value: !Ref PCCode
